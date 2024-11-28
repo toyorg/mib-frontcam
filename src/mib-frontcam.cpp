@@ -85,8 +85,7 @@ void loop() {
     speed = getData(HEADER_SPEED, CMD_SPEED);
 
     // Update relay state
-    digitalWrite(RELAY_PIN,
-                 (camera == 1 && speed <= SPEED_THRESHOLD && gear >= FORWARD_GEAR) ? HIGH : LOW);
+    digitalWrite(RELAY_PIN, (camera == 1 && speed <= SPEED_THRESHOLD && gear >= FORWARD_GEAR) ? HIGH : LOW);
 
     lastUpdateTime = currentTime;
   }
